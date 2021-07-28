@@ -7,25 +7,23 @@ function ProductPage() {
   console.log("Im in the product page");
   let [isLoaded, setIsLoaded] = useState(false);
   let [data, setData] = useState([]);
-  let { id } = useParams();
-  console.log(id);
-  async function loadData() {
-    try {
-      let address = `https://lereacteur-vinted-api.herokuapp.com/offer/${id}`;
-      console.log(`https://lereacteur-vinted-api.herokuapp.com/offer/${id}`);
-      let response = await axios.get(
-        `https://lereacteur-vinted-api.herokuapp.com/offer/${id}`
-      );
-      let data = response.data;
-      setData(data);
-      setIsLoaded(true);
-      console.log(data);
-    } catch (error) {
-      console.log(error.message);
-    }
-  }
+  const { id } = useParams();
+  // console.log(id);
 
   useEffect(() => {
+    async function loadData() {
+      try {
+        let address = `https://lereacteur-vinted-api.herokuapp.com/offer/`;
+        console.log(address);
+        let response = await axios.get(address);
+        let data = response.data;
+        setData(data);
+        setIsLoaded(true);
+        console.log(data);
+      } catch (error) {
+        console.log(error.message);
+      }
+    }
     loadData();
   }, []);
   return !isLoaded ? (
