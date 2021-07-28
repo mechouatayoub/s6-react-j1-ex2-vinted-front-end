@@ -1,4 +1,5 @@
 import OwnerAvatar from "./OwnerAvatar";
+import { Link } from "react-router-dom";
 function Product({ product }) {
   return (
     <div className="productCard">
@@ -8,18 +9,19 @@ function Product({ product }) {
         userName={product.owner.account.username}
         url={product.owner.account.url}
       />
-      <div className="productImageWidth">
-        <div className="productImageHeight">
-          <div className="productImageContainer">
-            <img
-              className="productImage"
-              src={product.product_pictures[0].secure_url}
-              alt={product.product_name.toLowerCase().replace(" ", "-")}
-              //   onClick={() => {<Link}}
-            />
+      <Link to={`/offer/${product._id}`}>
+        <div className="productImageWidth">
+          <div className="productImageHeight">
+            <div className="productImageContainer">
+              <img
+                className="productImage"
+                src={product.product_pictures[0].secure_url}
+                alt={product.product_name.toLowerCase().replace(" ", "-")}
+              />
+            </div>
           </div>
         </div>
-      </div>
+      </Link>
 
       {/* <div className="minifiedImageContainer">
         

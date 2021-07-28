@@ -1,2 +1,188 @@
 :root {
+  --font-familly: "Montserrat", sans-serif;
+  --font-weight1-thin: 100;
+  --font-weight2-extra-light: 200;
+  --font-weight3-light: 300;
+  --font-weight4-regular: 400;
+  --font-weight5-medium: 500;
+  --font-weight6-semi-bold: 600;
+  --font-weight7-bold: 700;
+  --font-weight8-extra-bold: 800;
+  --font-weight9-black: 900;
+  --page-max-width: 1200px;
+  --productCard-horizontal-margin: 2vmin;
+  --productCard-vertical-margin: 1vmin;
+  --font-size-14: 14px;
+  --font-size-12: 12px;
+  --font-size-24: 24px;
+  --font-color-theme: #09b1ba;
+  --font-size-16: 16px;
+}
+
+body {
+  font-family: var(--font-familly);
+  font-weight: var(--font-weight4-regular);
+  /* background-color: lightseagreen; */
+}
+
+.pageContainer {
+  max-width: var(--page-max-width);
+  margin: 0px auto;
+  /* background-color: coral; */
+}
+
+/* Section de produit */
+/* Mise en page par défaut */
+.productsSection {
+  /* background-color: aqua; */
+  margin: 3vmin 1vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.productSectionTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.voirTout {
+  /* background-color: aquamarine; */
+  background-color: white;
+  color: var(--font-color-theme);
+  font-size: var(--font-size-16);
+  border: 0px;
+  cursor: pointer;
+}
+.voirTout:hover {
+  background-color: #fcfdfe;
+}
+
+.productsList {
+  /* background-color: cornflowerblue; */
+  margin: 0vmin 0vmin;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.scrollable {
+  overflow-x: scroll;
+}
+
+.wrapped {
+  flex-wrap: wrap;
+}
+
+/* Product carte */
+.productCard {
+  /* background-color: beige; */
+  margin: var(--productCard-vertical-margin)
+    var(--productCard-horizontal-margin);
+  min-width: calc((100% - 2 * 3 * var(--productCard-horizontal-margin)) / 3);
+  display: flex;
+  flex-direction: column;
+}
+
+.productImageWidth {
+  /* background-color: brown; */
+  width: 100%;
+  padding: 60% 0;
+  position: relative;
+}
+
+.productImageHeight {
+  /* background-color: darkorchid; */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.productImageContainer {
+  /* background-color: forestgreen; */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.productImage {
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.productImage:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 10px 1px grey;
+}
+
+/* Traitement Avatar */
+.userAvatar {
+  /* background-color: aqua; */
+  margin: 1vmin 0vmin;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.avatarWidth {
+  /* background-color: bisque; */
+
+  width: 20%;
+  padding: 10% 0;
+  margin-right: 1vmin;
+  position: relative;
+}
+.avatarHeight {
+  /* background-color: aquamarine; */
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+
+.avatar {
+  flex-grow: 1;
+  text-align: center;
+  background-color: rgb(1, 1, 1, 0);
+  font-weight: var(--font-weight6-semi-bold);
+  color: white;
+  font-size: var(--font-size-14);
+}
+
+.userAvatar .userName {
+  /* background-color: aquamarine; */
+  font-size: var(--font-size-12);
+  color: #a9a9a9;
+}
+
+.productPrice {
+  margin-top: 0.5vmin;
+  /* background-color: aqua; */
+  font-weight: var(--font-weight4-regular);
+  font-size: var(--font-size-14);
+}
+
+.productBrand,
+.productSize {
+  margin: 0.2vmin 0;
+  color: #999999;
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight4-regular);
+}
+
+h2 {
+  /* background-color: aqua; */
+  font-size: var(--font-size-24);
+  font-weight: var(--font-weight5-regular);
 }
