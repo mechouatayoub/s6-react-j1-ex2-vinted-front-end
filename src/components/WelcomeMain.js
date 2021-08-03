@@ -1,7 +1,8 @@
 import ProductsSection from "./ProductsContainer.js";
 import { TYPES } from "./ProductsContainer.js";
 
-function WelcomeMain({ products }) {
+function WelcomeMain({ products, productsv2 }) {
+  console.log("version 2 des produits : ", productsv2);
   return (
     <>
       {" "}
@@ -13,6 +14,7 @@ function WelcomeMain({ products }) {
       <ProductsSection
         title="Articles populaires"
         products={products}
+        productsv2={productsv2}
         type={TYPES.SCROLLABLE}
       />
       <ProductsSection
@@ -20,11 +22,11 @@ function WelcomeMain({ products }) {
         products={products}
         type={TYPES.WRAPPED}
       />
-      <ProductsSection
+      {/* <ProductsSection
         title="Dressing en vitrine"
         products={products}
         type={TYPES.WRAPPED}
-      />
+      /> */}
     </>
   );
 }

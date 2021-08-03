@@ -1,5 +1,5 @@
 import Product from "./Product.js";
-function ProductsSection({ title, products, type }) {
+function ProductsSection({ title, products, productsv2, type }) {
   console.log(type);
   return (
     <div className="productsSection generalContainer">
@@ -11,6 +11,7 @@ function ProductsSection({ title, products, type }) {
       {/* <h3>Type: {type}</h3> */}
       <div className={`productsList ${type}`}>
         {products.map((product) => {
+          // console.log(product);
           return <Product key={product._id} product={product} />;
         })}
       </div>

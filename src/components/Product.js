@@ -1,6 +1,12 @@
 import OwnerAvatar from "./OwnerAvatar";
 import { Link } from "react-router-dom";
 function Product({ product }) {
+  console.log("im in the product2:", product);
+  console.log("my product id 2: ", product._id);
+  function go() {
+    console.log("mon produit:", product);
+    return `/offer/${product._id}`;
+  }
   return (
     <div className="productCard">
       {/* Il faut implémenter le clique */}
@@ -15,7 +21,7 @@ function Product({ product }) {
             <div className="productImageContainer">
               <img
                 className="productImage"
-                src={product.product_pictures[0].secure_url}
+                src={product.product_image.secure_url}
                 alt={product.product_name.toLowerCase().replace(" ", "-")}
               />
             </div>

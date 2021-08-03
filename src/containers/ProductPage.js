@@ -7,9 +7,8 @@ function ProductPage() {
   console.log("Im in the product page");
   let [isLoaded, setIsLoaded] = useState(false);
   let [data, setData] = useState([]);
-  const { id } = useParams();
-
-  // console.log(id);
+  let { id } = useParams();
+  console.log(id);
 
   useEffect(() => {
     async function loadData() {
@@ -26,7 +25,7 @@ function ProductPage() {
       }
     }
     loadData();
-  }, []);
+  }, [id]);
   return !isLoaded ? (
     <div>I'm loading the page</div>
   ) : (

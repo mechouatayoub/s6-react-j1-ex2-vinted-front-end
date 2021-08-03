@@ -186,3 +186,23 @@ h2 {
   font-size: var(--font-size-24);
   font-weight: var(--font-weight5-regular);
 }
+
+/* Search Bar */
+.mainBar {
+  display: flex;
+  flex-direction: row;
+}
+
+.searchField {
+  flex-grow: 1;
+  margin-right: 15vmin;
+}
+
+.signUpPage {
+  display: flex;
+  flex-direction: column;
+}
+.signUpForm {
+  display: flex;
+  flex-direction: column;
+}
